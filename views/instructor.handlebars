@@ -1,0 +1,43 @@
+<nav>
+  <div class="brand">
+    <h1>enscribe</h1>
+    <i class="fas fa-pen-nib"></i>
+  </div>
+  <div class="links">
+    <span id="logout">Logout</span>
+  </div>
+</nav>
+
+
+<div id="app-container">
+  <div id="home">
+    <div class="section-header">
+      <h3>{{firstName}} {{lastName}}'s Roster</h3>
+      <button data-id="{{id}}" class="student-modal" id="student-modal"><i class="fas fa-user-plus"></i></button>
+    </div>
+    <div id="student-list-container">
+      {{#if Students}}
+      {{#each Students}}
+      <div data-id="{{this.id}}" class="list-group-item student">
+        <h3>{{this.firstName}} {{this.lastName}}</h3>
+        <button id="delete-student" class="student-modal small"><i class="fas fa-times"></i></button>
+      </div>
+      {{/each}}
+      {{/if}}
+      {{#unless Students}}
+      No students to display. Add some to use the app!
+      {{/unless}}
+      </span>
+    </div>
+  </div>
+  <div id="students-container">
+    {{#if Students}}
+    {{#each Students}}
+    {{>students/student-block id=id firstName=firstName lastName=lastName notes=notes display="none" displayActions="flex"}}
+    {{/each}}
+    {{/if}}
+  </div>
+</div>
+{{>addStudent/addStudent-block}}
+{{>addLesson/addLesson-block}}
+</div>

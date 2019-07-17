@@ -1,0 +1,83 @@
+<script src="/js/auth.js"></script>
+
+{{!-- Nav --}}
+
+<nav>
+  <div class="brand">
+    <h1>enscribe</h1>
+    <i class="fas fa-pen-nib"></i>
+  </div>
+  <div class="links">
+    <a href="/whodis">Login</a>
+    <a href="/about">About</a>
+  </div>
+</nav>
+
+{{!-- Tagline --}}
+
+<div class="tagline">
+  <p>Welcome to <span>enscribe</span>, a note-taking app for tutors.</p>
+</div>
+
+{{!-- Display sign-in form --}}
+
+<div class="container-login">
+  <div class="header-login">
+    <h1>Login</h1>
+  </div>
+  <div class="form-login">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="login-email" placeholder="me@example.com" type="email" name="email" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="login-password" type="password" name="password" />
+    </div>
+    <div class="input-control">
+      <button class="form-button" id="login-btn">Login</button>
+      <span id="to-signup">Create Account</span>
+      <div class="invalid-login">
+        <span>Incorrect username or password</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Display sign-up form --}}
+
+<div class="container-signup">
+  <div class="header-login">
+    <h1>Sign Up</h1>
+  </div>
+  <div class="form-login">
+    <div class="form-group">
+      <label for="first-name">First Name:</label>
+      <input id="first-name" placeholder="" type="text" name="first-name" />
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last Name:</label>
+      <input id="last-name" placeholder="" type="text" name="last-name" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="new-email" placeholder="me@example.com" type="email" name="email" />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input id="phone" placeholder="555-555-5555" type="text" name="phone" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="new-password" type="password" name="password" />
+    </div>
+    <div class="form-group">
+      <label for="cpassword">Confirm Password:</label>
+      <input id="confirm-password" type="password" name="cpassword" />
+    </div>
+    <div class="input-control">
+      <button class="form-button" id="signup-btn">Sign Up</button>
+      <span id="to-login">Already have an account?</span>
+    </div>
+  </div>
+</div>
